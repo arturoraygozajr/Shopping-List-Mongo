@@ -3,7 +3,19 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  input#name(placeholder='Item Name')
+  input#price(placeholder='Price')
+  input#description(placeholder='Descriptions')
+  button.btn.btn-defult#addItem Add Item
+  button.btn.btn-primary.btn-lg(type='button', data-toggle='modal', data-target='#myModal')|Edit
+
   ul
     each item in items
-      li= item
+      li(data-id= item.id)
+        p= item.itemName
+        p= item.price
+        p= item.description
+        button#deleteBtn del
       
+
+// Modal
