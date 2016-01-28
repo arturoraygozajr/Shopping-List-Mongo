@@ -5,7 +5,8 @@ var Item;
 
 var itemSchema = Schema({
 	itemName : {type: String, required: true},
-	price : {type: Number, required: true}
+  price : {type: Number, required: true},
+	description : {type: String, required: true},
 });
 
 Item = mongoose.model('Item', itemSchema);
